@@ -13,6 +13,7 @@ class ProductPageLocators():
 	NAME_PRODUCT = (By.CSS_SELECTOR, ".col-sm-6.product_main > h1")
 	NAME_PRODUCT_ADD = (By.CSS_SELECTOR, "#messages strong")
 	PRICE_PRODUCT_ADD = (By.CSS_SELECTOR, ".alert.alert-safe.alert-noicon.alert-info strong")
+	SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alertinner")
 
 	
 		

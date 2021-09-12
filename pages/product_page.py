@@ -34,4 +34,13 @@ class ProductPage(BasePage):
 		print(name_product_add)
 		assert name_product == name_product_add, "Название книги отличается"
 		assert price_product == price_product_add, "Цена отличается"
+
+	def test_guest_cant_see_success_message_after_adding_product_to_basket(self):
+		assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Сообщение о добавлении есть, но быть не должно"
+
+	def test_guest_cant_see_success_message(self):
+		assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Сообщение о добавлении есть, но быть не должно"
+
+	def test_message_disappeared_after_adding_product_to_basket(self):
+		assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Сообщение не исчесзло"
 		
