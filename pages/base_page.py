@@ -56,3 +56,7 @@ class BasePage():
 
 	def should_be_login_link(self):
 		assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Ссылка не найдена"
+
+	def click_base_page(self):
+		base_page_btn = self.browser.find_element(*BasePageLocators.BTN_BASKET_PAGE)
+		base_page_btn.click()
