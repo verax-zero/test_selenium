@@ -60,3 +60,6 @@ class BasePage():
 	def click_base_page(self):
 		base_page_btn = self.browser.find_element(*BasePageLocators.BTN_BASKET_PAGE)
 		base_page_btn.click()
+
+	def should_be_authorized_user(self):
+		assert self.is_element_present(*BasePageLocators.USER_ICON), "Значок пользователя не представлен, пользователь не зарегистрирован"
